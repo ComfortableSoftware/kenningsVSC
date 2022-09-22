@@ -1,0 +1,3 @@
+"for _VAR_ in _ITERABLE_:%N%%T%%ST%%C%pass%N%"
+
+"for _key_, _val_ in _DICT_.items():%N%%T%%ST%%C%pass%N%"

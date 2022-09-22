@@ -1,0 +1,19 @@
+{
+  "name": "kennings",
+  "main": "./lib/kennings",
+  "depricated": "false",
+  "version": "0.5.0",
+  "description": "Snippets my way",
+  "keywords": [
+    "Snippets",
+    "Macros"
+  ],
+  "repository": "https://github.com/ComfortableSoftware-DEV/kennings.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "cson-parser": "^4.0.9"
+  }
+}

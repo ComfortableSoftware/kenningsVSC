@@ -1,0 +1,42 @@
+"source.lsl":
+  NewTextList: [
+    "zippy %ST%0"  # 0
+    "%ST%1"  # 1
+    "%ST%2"  # 2
+    "%ST%3"  # 3
+    "%ST%4"  # 4
+    "%ST%5"  # 5
+    "%ST%6"  # 6
+    "%ST%7"  # 7
+    "%ST%8"  # 8
+    "%ST%9"  # 9
+    "%ST%A"  # A
+    "%ST%B"  # B
+    "\ \ \# %ST%%C%"  # C
+    "%ST%D"  # D
+    "%ST%E"  # E
+    "%ST%F"  # F
+    "%ST%G"  # G
+    "%ST%H"  # H
+    "%ST%I"  # I
+    "%ST%J"  # J
+    "%ST%K"  # K
+    "%ST%L"  # L
+    "%ST%M"  # M
+    "%ST%N"  # N
+    "%ST%O"  # O
+    "%ST%P"  # P
+    "%ST%Q"  # Q
+    "%ST%R"  # R
+    "%ST%S"  # S
+    "%ST%T"  # T
+    "%ST%U"  # U
+    "%ST%V"  # V
+    "%ST%W"  # W
+    "%ST%X"  # X
+    "%ST%Y"  # Y
+    "%ST%Z"  # Z
+  ]
+  LowerCaseFixedText: true
+  UpperCaseSelectedText: false
+  LinkifyFixedText: true

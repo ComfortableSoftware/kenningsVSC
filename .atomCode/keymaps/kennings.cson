@@ -1,0 +1,174 @@
+
+'atom-text-editor':
+  'alt-ctrl-c c a': 'kennings:insertIt-alt-ctrl-c°c°a'  # Character approximate end of repeated text start of number of repeats
+  'alt-ctrl-c c d': 'kennings:insertIt-alt-ctrl-c°c°d'  # Character 'Degrees' start of repeated text.
+  'alt-ctrl-c c l': 'kennings:insertIt-alt-ctrl-c°c°l'  # Character hollow left triangle, end of filename
+  'alt-ctrl-c c q': 'kennings:insertIt-alt-ctrl-c°c°q'  # Character reverse quote enod of number of repeats
+  'alt-ctrl-c c r': 'kennings:insertIt-alt-ctrl-c°c°r'  # Character hollow right triangle, start of filename
+  'alt-ctrl-c n l': 'kennings:insertIt-alt-ctrl-c°n°l'  # Character newline
+  'alt-ctrl-c q d': 'kennings:insertIt-alt-ctrl-c°q°d'  # Character quote double
+  'alt-ctrl-m 0 a': 'kennings:insertIt-alt-ctrl-m°0°a'  # Mark 0 all, up and down order lines
+  'alt-ctrl-m 0 b': 'kennings:insertIt-alt-ctrl-m°0°b'  # Mark 0 both, down and up order lines
+  'alt-ctrl-m 0 e': 'kennings:insertIt-alt-ctrl-m°0°e'  # Mark 0 end (up arrows)
+  'alt-ctrl-m 0 m': 'kennings:insertIt-alt-ctrl-m°0°m'  # Mark 0 middle, up and down together
+  'alt-ctrl-m 0 s': 'kennings:insertIt-alt-ctrl-m°0°s'  # Mark 0 start (down arrows)
+  'alt-ctrl-m 0 x': 'kennings:insertIt-alt-ctrl-m°0°x'  # Mark 0 extended, down, middle, and up lines
+  'alt-ctrl-m 1 a': 'kennings:insertIt-alt-ctrl-m°1°a'  # Mark 1 all, up and down order lines
+  'alt-ctrl-m 1 b': 'kennings:insertIt-alt-ctrl-m°1°b'  # Mark 1 both, down and up order lines
+  'alt-ctrl-m 1 e': 'kennings:insertIt-alt-ctrl-m°1°e'  # Mark 1 end, (up arrows)
+  'alt-ctrl-m 1 m': 'kennings:insertIt-alt-ctrl-m°1°m'  # Mark 1 middle, up and down together
+  'alt-ctrl-m 1 s': 'kennings:insertIt-alt-ctrl-m°1°s'  # Mark 1 start (down arrows)
+  'alt-ctrl-m 1 x': 'kennings:insertIt-alt-ctrl-m°1°x'  # Mark 1 extended, down, middle, and up lines
+  'alt-ctrl-m 2 a': 'kennings:insertIt-alt-ctrl-m°2°a'  # Mark 2 all, up and down order lines
+  'alt-ctrl-m 2 b': 'kennings:insertIt-alt-ctrl-m°2°b'  # Mark 2 both, down and up order lines
+  'alt-ctrl-m 2 e': 'kennings:insertIt-alt-ctrl-m°2°e'  # Mark 2 end (up arrows)
+  'alt-ctrl-m 2 m': 'kennings:insertIt-alt-ctrl-m°2°m'  # Mark 2 middle, up and down together
+  'alt-ctrl-m 2 s': 'kennings:insertIt-alt-ctrl-m°2°s'  # Mark 2 start (down arrows)
+  'alt-ctrl-m 2 x': 'kennings:insertIt-alt-ctrl-m°2°x'  # Mark 2 extended, down, middle, and up lines
+  'alt-ctrl-m 3 a': 'kennings:insertIt-alt-ctrl-m°3°a'  # Mark 3 all, up and down order lines
+  'alt-ctrl-m 3 b': 'kennings:insertIt-alt-ctrl-m°3°b'  # Mark 3 both, down and up order lines
+  'alt-ctrl-m 3 e': 'kennings:insertIt-alt-ctrl-m°3°e'  # Mark 3 end (up arrows)
+  'alt-ctrl-m 3 m': 'kennings:insertIt-alt-ctrl-m°3°m'  # Mark 3 middle, up and down together
+  'alt-ctrl-m 3 s': 'kennings:insertIt-alt-ctrl-m°3°s'  # Mark 3 start (down arrows)
+  'alt-ctrl-m 3 x': 'kennings:insertIt-alt-ctrl-m°3°x'  # Mark 3 extended, down, middle, and up lines
+  'alt-ctrl-m 4 a': 'kennings:insertIt-alt-ctrl-m°4°a'  # Mark 4 all, up and down order lines
+  'alt-ctrl-m 4 b': 'kennings:insertIt-alt-ctrl-m°4°b'  # Mark 4 both, down and up order lines
+  'alt-ctrl-m 4 e': 'kennings:insertIt-alt-ctrl-m°4°e'  # Mark 4 end (up arrows)
+  'alt-ctrl-m 4 m': 'kennings:insertIt-alt-ctrl-m°4°m'  # Mark 4 middle, up and down together
+  'alt-ctrl-m 4 s': 'kennings:insertIt-alt-ctrl-m°4°s'  # Mark 4 start (down arrows)
+  'alt-ctrl-m 4 x': 'kennings:insertIt-alt-ctrl-m°4°x'  # Mark 4 extended, down, middle, and up lines
+  'alt-ctrl-m 5 a': 'kennings:insertIt-alt-ctrl-m°5°a'  # Mark 5 all, up and down order lines
+  'alt-ctrl-m 5 b': 'kennings:insertIt-alt-ctrl-m°5°b'  # Mark 5 both, down and up order lines
+  'alt-ctrl-m 5 e': 'kennings:insertIt-alt-ctrl-m°5°e'  # Mark 5 end (up arrows)
+  'alt-ctrl-m 5 m': 'kennings:insertIt-alt-ctrl-m°5°m'  # Mark 5 middle, up and down together
+  'alt-ctrl-m 5 s': 'kennings:insertIt-alt-ctrl-m°5°s'  # Mark 5 start (down arrows)
+  'alt-ctrl-m 5 x': 'kennings:insertIt-alt-ctrl-m°5°x'  # Mark 5 extended, down, middle, and up lines
+  'alt-ctrl-m 6 a': 'kennings:insertIt-alt-ctrl-m°6°a'  # Mark 6 all, up and down order lines
+  'alt-ctrl-m 6 b': 'kennings:insertIt-alt-ctrl-m°6°b'  # Mark 6 both, down and up order lines
+  'alt-ctrl-m 6 e': 'kennings:insertIt-alt-ctrl-m°6°e'  # Mark 6 end (up arrows)
+  'alt-ctrl-m 6 m': 'kennings:insertIt-alt-ctrl-m°6°m'  # Mark 6 middle, up and down together
+  'alt-ctrl-m 6 s': 'kennings:insertIt-alt-ctrl-m°6°s'  # Mark 6 start (down arrows)
+  'alt-ctrl-m 6 x': 'kennings:insertIt-alt-ctrl-m°6°x'  # Mark 6 extended, down, middle, and up lines
+  'alt-ctrl-m 7 a': 'kennings:insertIt-alt-ctrl-m°7°a'  # Mark 7 all, up and down order lines
+  'alt-ctrl-m 7 b': 'kennings:insertIt-alt-ctrl-m°7°b'  # Mark 7 both, down and up order lines
+  'alt-ctrl-m 7 e': 'kennings:insertIt-alt-ctrl-m°7°e'  # Mark 7 end (up arrows)
+  'alt-ctrl-m 7 m': 'kennings:insertIt-alt-ctrl-m°7°m'  # Mark 7 middle, up and down together
+  'alt-ctrl-m 7 s': 'kennings:insertIt-alt-ctrl-m°7°s'  # Mark 7 start (down arrows)
+  'alt-ctrl-m 7 x': 'kennings:insertIt-alt-ctrl-m°7°x'  # Mark 7 extended, down, middle, and up lines
+  'alt-ctrl-m 8 a': 'kennings:insertIt-alt-ctrl-m°8°a'  # Mark 8 all, up and down order lines
+  'alt-ctrl-m 8 b': 'kennings:insertIt-alt-ctrl-m°8°b'  # Mark 8 both, down and up order lines
+  'alt-ctrl-m 8 e': 'kennings:insertIt-alt-ctrl-m°8°e'  # Mark 8 end (up arrows)
+  'alt-ctrl-m 8 m': 'kennings:insertIt-alt-ctrl-m°8°m'  # Mark 8 middle, up and down together
+  'alt-ctrl-m 8 s': 'kennings:insertIt-alt-ctrl-m°8°s'  # Mark 8 start (down arrows)
+  'alt-ctrl-m 8 x': 'kennings:insertIt-alt-ctrl-m°8°x'  # Mark 8 extended, down, middle, and up lines
+  'alt-ctrl-m 9 a': 'kennings:insertIt-alt-ctrl-m°9°a'  # Mark 9 all, up and down order lines
+  'alt-ctrl-m 9 b': 'kennings:insertIt-alt-ctrl-m°9°b'  # Mark 9 both, down and up order lines
+  'alt-ctrl-m 9 e': 'kennings:insertIt-alt-ctrl-m°9°e'  # Mark 9 end (up arrows)
+  'alt-ctrl-m 9 m': 'kennings:insertIt-alt-ctrl-m°9°m'  # Mark 9 middle, up and down together
+  'alt-ctrl-m 9 s': 'kennings:insertIt-alt-ctrl-m°9°s'  # Mark 9 start (down arrows)
+  'alt-ctrl-m 9 x': 'kennings:insertIt-alt-ctrl-m°9°x'  # Mark 9 extended, down, middle, and up lines
+  'alt-ctrl-m b c': 'kennings:insertIt-alt-ctrl-m°b°c'  # Block Comment
+  'alt-ctrl-m b n': 'kennings:insertIt-alt-ctrl-m°b°n'  # Mark block note
+  'alt-ctrl-m c b': 'kennings:insertIt-alt-ctrl-m°c°b'  # Comment block
+  'alt-ctrl-m c c': 'kennings:insertIt-alt-ctrl-m°c°c'  # Generic comment starter
+  'alt-ctrl-m c t': 'kennings:insertIt-alt-ctrl-m°c°t'  # Comment block, tall edition
+  'alt-ctrl-m i l': 'kennings:insertIt-alt-ctrl-m°i°l'  # Mark info line
+  'alt-ctrl-m n a': 'kennings:insertIt-alt-ctrl-m°n°a'  # Mark nothing all up, down order.
+  'alt-ctrl-m n b': 'kennings:insertIt-alt-ctrl-m°n°b'  # Mark nothing both down, up arrows.
+  'alt-ctrl-m n d': 'kennings:insertIt-alt-ctrl-m°n°d'  # Mark not diagnostic comment line
+  'alt-ctrl-m n e': 'kennings:insertIt-alt-ctrl-m°n°e'  # Mark nothing end, (up arrows).
+  'alt-ctrl-m n m': 'kennings:insertIt-alt-ctrl-m°n°m'  # Mark nothing middle, up and down arrows
+  'alt-ctrl-m n s': 'kennings:insertIt-alt-ctrl-m°n°s'  # Mark nothing start, down arrows
+  'alt-shift-s p': 'kennings:insertIt-alt-shift-s°p'  # Shebang python
+  'alt-shift-s z': 'kennings:insertIt-alt-shift-s°z'  # Shebang zsh
+
+'atom-text-editor[data-grammar="source arduino"]':
+  'alt-ctrl-d c c': 'kennings:insertIt-alt-ctrl-d°c°c'  # Define class class
+  'alt-ctrl-d c f': 'kennings:insertIt-alt-ctrl-d°c°f'  # Define class function
+  'alt-ctrl-d i e': 'kennings:insertIt-alt-ctrl-d°i°e'  # Define if elif
+  'alt-ctrl-d i i': 'kennings:insertIt-alt-ctrl-d°i°i'  # Define if if
+  'alt-ctrl-d i s': 'kennings:insertIt-alt-ctrl-d°i°s'  # Define if else
+  'alt-ctrl-d n f': 'kennings:insertIt-alt-ctrl-d°n°f'  # Define normal function
+  'alt-ctrl-m b c': 'kennings:insertIt-alt-ctrl-m°b°c'  # Block Comment
+  'alt-ctrl-m b n': 'kennings:insertIt-alt-ctrl-m°b°n'  # Mark block note
+  'alt-ctrl-m c b': 'kennings:insertIt-alt-ctrl-m°c°b'  # Comment block
+  'alt-ctrl-m c c': 'kennings:insertIt-alt-ctrl-m°c°c'  # Generic comment starter
+  'alt-ctrl-m c t': 'kennings:insertIt-alt-ctrl-m°c°t'  # Comment block, tall edition
+  'alt-ctrl-m i l': 'kennings:insertIt-alt-ctrl-m°i°l'  # Mark info line
+  'alt-ctrl-m n a': 'kennings:insertIt-alt-ctrl-m°n°a'  # Mark nothing all up, down order.
+  'alt-ctrl-m n b': 'kennings:insertIt-alt-ctrl-m°n°b'  # Mark nothing both down, up arrows.
+  'alt-ctrl-m n d': 'kennings:insertIt-alt-ctrl-m°n°d'  # Mark not diagnostic comment line
+  'alt-ctrl-m n e': 'kennings:insertIt-alt-ctrl-m°n°e'  # Mark nothing end, (up arrows).
+  'alt-ctrl-m n m': 'kennings:insertIt-alt-ctrl-m°n°m'  # Mark nothing middle, up and down arrows
+  'alt-ctrl-m n s': 'kennings:insertIt-alt-ctrl-m°n°s'  # Mark nothing start, down arrows
+
+'atom-text-editor[data-grammar="source python"]':
+  'alt-ctrl-c c c': 'kennings:insertIt-alt-ctrl-c°c°c'  # Character DBLQT from CF_V
+  'alt-ctrl-c d c': 'kennings:insertIt-alt-ctrl-c°d°c'  # Character DBLQT from CF_V
+  'alt-ctrl-c n c': 'kennings:insertIt-alt-ctrl-c°n°c'  # Character NEWLINE from CF_V
+  'alt-ctrl-d c c': 'kennings:insertIt-alt-ctrl-d°c°c'  # Define class class
+  'alt-ctrl-d c f': 'kennings:insertIt-alt-ctrl-d°c°f'  # Define class function
+  'alt-ctrl-d f d': 'kennings:insertIt-alt-ctrl-d°f°d'  # Define dict for loop
+  'alt-ctrl-d f f': 'kennings:insertIt-alt-ctrl-d°f°f'  # Define normal for loop
+  'alt-ctrl-d i e': 'kennings:insertIt-alt-ctrl-d°i°e'  # Define if elif
+  'alt-ctrl-d i i': 'kennings:insertIt-alt-ctrl-d°i°i'  # Define if if
+  'alt-ctrl-d i s': 'kennings:insertIt-alt-ctrl-d°i°s'  # Define if else
+  'alt-ctrl-d n f': 'kennings:insertIt-alt-ctrl-d°n°f'  # Define normal function
+  'alt-ctrl-d o b': 'kennings:insertIt-alt-ctrl-d°o°b'  # Define options boolean function
+  'alt-ctrl-d o f': 'kennings:insertIt-alt-ctrl-d°o°f'  # Define options function
+  'alt-ctrl-f 1 b': 'kennings:insertIt-alt-ctrl-f°1°b'  # Atom custom folds fold 1 both
+  'alt-ctrl-f 1 e': 'kennings:insertIt-alt-ctrl-f°1°e'  # Atom custom folds fold 1 end
+  'alt-ctrl-f 1 s': 'kennings:insertIt-alt-ctrl-f°1°s'  # Atom custom folds fold 1 start
+  'alt-ctrl-f 2 b': 'kennings:insertIt-alt-ctrl-f°2°b'  # Atom custom folds fold 2 both
+  'alt-ctrl-f 2 e': 'kennings:insertIt-alt-ctrl-f°2°e'  # Atom custom folds fold 2 end
+  'alt-ctrl-f 2 s': 'kennings:insertIt-alt-ctrl-f°2°s'  # Atom custom folds fold 2 start
+  'alt-ctrl-f 3 b': 'kennings:insertIt-alt-ctrl-f°3°b'  # Atom custom folds fold 3 both
+  'alt-ctrl-f 3 e': 'kennings:insertIt-alt-ctrl-f°3°e'  # Atom custom folds fold 3 end
+  'alt-ctrl-f 3 s': 'kennings:insertIt-alt-ctrl-f°3°s'  # Atom custom folds fold 3 start
+  'alt-ctrl-p e d': 'kennings:insertIt-alt-ctrl-p°e°d'  # Phrase empty _dictToRtn_
+  'alt-ctrl-p e l': 'kennings:insertIt-alt-ctrl-p°e°l'  # Phrase empty _listToRtn_
+  'alt-ctrl-p e p': 'kennings:insertIt-alt-ctrl-p°e°p'  # Phrase empty print
+  'alt-ctrl-p e q': 'kennings:insertIt-alt-ctrl-p°e°q'  # Phrase empty f-quotes
+  'alt-ctrl-p e s': 'kennings:insertIt-alt-ctrl-p°e°s'  # Phrase empty _strToRtn_
+  'alt-ctrl-p e t': 'kennings:insertIt-alt-ctrl-p°e°t'  # Empty _tupToRtn_
+  'alt-ctrl-p p s': 'kennings:insertIt-alt-ctrl-p°p°s'  # Phrase _strToRtn_ += FTQ
+  'alt-ctrl-p q r s': 'kennings:insertIt-alt-ctrl-p°q°r°s'  # Phrase return fquotes
+  'alt-ctrl-p q s': 'kennings:insertIt-alt-ctrl-p°q°s'  # Phrase equals empty fquotes
+  'alt-ctrl-p r d': 'kennings:insertIt-alt-ctrl-p°r°d'  # Phrase return _dictToRtn_
+  'alt-ctrl-p r l': 'kennings:insertIt-alt-ctrl-p°r°l'  # Phrase return _listToRtn_
+  'alt-ctrl-p r n': 'kennings:insertIt-alt-ctrl-p°r°n'  # Return None
+  'alt-ctrl-p r s': 'kennings:insertIt-alt-ctrl-p°r°s'  # Empty _strToRtn_
+  'alt-ctrl-p r t': 'kennings:insertIt-alt-ctrl-p°r°t'  # Empty _tupToRtn_
+  'alt-ctrl-p v e': 'kennings:insertIt-alt-ctrl-p°v°e'  # Throw error template
+  'alt-ctrl-p v s': 'kennings:insertIt-alt-ctrl-p°v°s'  # Empty _TStr_
+
+'atom-text-editor[data-grammar="source shell"]':
+  'alt-ctrl-d i e': 'kennings:insertIt-alt-ctrl-d°i°e'  # Define if elif
+  'alt-ctrl-d i i': 'kennings:insertIt-alt-ctrl-d°i°i'  # Define if if
+  'alt-ctrl-d i s': 'kennings:insertIt-alt-ctrl-d°i°s'  # Define if else
+  'alt-ctrl-d n f': 'kennings:insertIt-alt-ctrl-d°n°f'  # Define normal function
+
+'atom-text-editor[data-grammar="text md"]':
+  'alt-ctrl-c a': 'kennings:insertIt-alt-ctrl-c°a'  # Communicate Air general
+  'alt-ctrl-c c': 'kennings:insertIt-alt-ctrl-c°c'  # Communicate character general
+  'alt-ctrl-c n': 'kennings:insertIt-alt-ctrl-c°n'  # Communicate walkon character anonymous
+  'alt-ctrl-c p': 'kennings:insertIt-alt-ctrl-c°p'  # Communicate pause
+  'alt-ctrl-c t c': 'kennings:insertIt-alt-ctrl-c°t°c'  # Communicate character general
+  'alt-ctrl-c t w': 'kennings:insertIt-alt-ctrl-c°t°w'  # Communicate Walkon general
+  'alt-ctrl-c w': 'kennings:insertIt-alt-ctrl-c°w'  # Communicate walkon character general
+  'alt-ctrl-c z': 'kennings:insertIt-alt-ctrl-c°z'  # Communicate time jump
+  'alt-ctrl-f r 0': 'kennings:insertIt-alt-ctrl-f°r°0'  # File reference link in this file
+  'alt-ctrl-f r c a': 'kennings:insertIt-alt-ctrl-f°r°c°a'  # File reference link in CALENDAR.md
+  'alt-ctrl-f r c h': 'kennings:insertIt-alt-ctrl-f°r°c°h'  # File reference link in CHARACTERS.md
+  'alt-ctrl-f r c o': 'kennings:insertIt-alt-ctrl-f°r°c°o'  # File reference link in CODES.md
+  'alt-ctrl-f r c w': 'kennings:insertIt-alt-ctrl-f°r°c°w'  # File reference link in WALKONCHARACTERS.md
+  'alt-ctrl-f r g d': 'kennings:insertIt-alt-ctrl-f°r°g°d'  # File reference link in DnDGLOSSARY.md
+  'alt-ctrl-f r g g': 'kennings:insertIt-alt-ctrl-f°r°g°g'  # File reference link in GLOSSARY.md
+  'alt-ctrl-f r g t': 'kennings:insertIt-alt-ctrl-f°r°g°t'  # File reference link in TRANSPORTATIONGLOSSARY.md
+  'alt-ctrl-f r m l': 'kennings:insertIt-alt-ctrl-f°r°m°l'  # File reference link in HOWIMETLIAM.md
+  'alt-ctrl-f r w': 'kennings:insertIt-alt-ctrl-f°r°w'  # File reference link in WALKONCHARACTERS.md
+  'alt-ctrl-f s b': 'kennings:insertIt-alt-ctrl-f°s°b'  # Bold
+  'alt-ctrl-f s h': 'kennings:insertIt-alt-ctrl-f°s°h'  # Format selection highlight (bold italics)
+  'alt-ctrl-f s i': 'kennings:insertIt-alt-ctrl-f°s°i'  # Format selection italics
+  'alt-ctrl-f s o h': 'kennings:insertIt-alt-ctrl-f°s°o°h'  # Overstrike and highlight
+  'alt-ctrl-f s o o': 'kennings:insertIt-alt-ctrl-f°s°o°o'  # Overstrike only

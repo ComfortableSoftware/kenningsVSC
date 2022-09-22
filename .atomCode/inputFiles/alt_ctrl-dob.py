@@ -1,0 +1,1 @@
+\# * %R%°\#*≈150؟%N%\# * Start of %ST%%N%\# * %R%°\#*≈150؟%N%def %ST%():%N%%T%\# fold here %R%°⟱1≈150؟%%N%%T%return V.CF_OPT.V.O_CHOICES_MAKER(%N%%T%%T%%T%args_=[%N%%T%%T%%T%],%N%%T%%T%%T%dest_=%Q%_DEST_%Q%,%N%%T%%T%%T%help1_ = f%Q%%Q%%Q%%Q%%Q%%Q%,%N%%T%)%N%%T%\# fold here %R%°⟰1≈150؟%N%\# * %R%°\#*≈150؟%N%\# * End of %ST%%N%\# * %R%°\#*≈150؟%N%%N%%N%%N%
