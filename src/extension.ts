@@ -11,54 +11,41 @@ import {
 import * as path from "path";
 import * as cp from "child_process";
 
-// import * as path from 'path';
 
 
-
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: ExtensionContext) {
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log("Congratulations, your extension 'kenningsVS' is now active!");
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
 	const disposable = commands.registerCommand('extension.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		window.showInformationMessage("Hello World, don't be a trumpstrap yo!");
-		const uri = workspace.textDocuments[0].uri;
 		const openFiles = workspace.textDocuments;
 		for (let i = 0; i < openFiles.length; i++) {
 				const thisUri: string  = openFiles[i].uri.authority;
-				console.log("thisUri", thisUri);
-				if (thisUri.substring(0,4) == "file:") {
-					console.log(openFiles[i]);
-					console.log(path.dirname(openFiles[i].fileName));
-				}
+				console.log(openFiles[i]);
+				// console.log(path.dirname(openFiles[i].fileName));
 		}
-		console.log();
-		const workspacePath = workspace.getWorkspaceFolder(uri)?.uri.fsPath;
-		//const newFilename = myFile.uri.fspath;
-		//console.log(newFilename);
-		// eslint-disable-next-line @typescript-eslint/no-var-requires
-		//console.log(TextEditor.document.);
 	});
-
 	context.subscriptions.push(disposable);
-
-
 }
-function sendToTerminal(stringToSend: string) {
-	cp.exec("echo ${stringToSend}", (err, stdout, stderr) => {
-    console.log("stdout: " + stdout);
-    console.log("stderr: " + stderr);
-    if (err) {
-        console.log("error: " + err);
-    }
-});
-}
+
+//		window.showInformationMessage("Hello World, don't be a trumpstrap yo!");
+//		const uri = workspace.textDocuments[0].uri;
+		// const openFiles = workspace.textDocuments;
+		//for (let i = 0; i < openFiles.length; i++) {
+		//		const thisUri: string  = openFiles[i].uri.authority;
+		//		console.log("thisUri", thisUri);
+		//		if (thisUri.substring(0,4) == "file:") {
+		//			console.log(openFiles[i]);
+		//			console.log(path.dirname(openFiles[i].fileName));
+		//		}
+		//}
+//		const workspacePath = workspace.getWorkspaceFolder(uri)?.uri.fsPath;
+//		console.log(workspacePath);
+
+//	const disposableC = commands.registerCommand('extension.modeC', () => {doInertStart("modeC");});
+//	context.subscriptions.push(disposableC);
+//	const disposableD = commands.registerCommand('extension.modeC', () => {doInertStart("modeD");});
+//	context.subscriptions.push(disposableD);
+//	const disposableF = commands.registerCommand('extension.modeC', () => {doInertStart("modeF");});
+//	context.subscriptions.push(disposableF);
+//	const disposableP = commands.registerCommand('extension.modeC', () => {doInertStart("modeP");});
+//	context.subscriptions.push(disposableP);
+//}
 
