@@ -1,10 +1,10 @@
 {
-  "name": "kenningsVS",
-  "displayName": "kenningsVS",
-  "description": "HelloWorld example for VS Code",
-  "version": "0.0.1",
+  "name": "kenningsVSC",
+  "displayName": "kenningsVSC",
+  "description": "My reimagined snippets from atom ported to vscode",
+  "version": "0.1.0",
   "publisher": "GaelicGrime",
-  "repository": "https://github.com/Microsoft/vscode-extension-samples/kenningsVS",
+  "repository": "https://github.com/GaelicGrime/kenningsVSC",
   "engines": {
     "vscode": "^1.61.0"
   },
@@ -12,7 +12,10 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.helloWorld"
+    "onCommand:extension.helloWorld",
+    "onCommand:kennings.modeC",
+    "onCommand:kennings.modeD",
+    "onCommand:kennings.modeP"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -20,10 +23,22 @@
       {
         "command": "extension.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "kennings.modeC",
+        "title": "Mode C"
+      },
+      {
+        "command": "kennings.modeD",
+        "title": "Mode D"
+      },
+      {
+        "command": "kennings.modeP",
+        "title": "Mode P"
       }
-		]
-	}
-  ,"scripts": {
+    ]
+  },
+  "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",

@@ -8,17 +8,26 @@
   - %QS% insert single quote
   - %R%°CHARACTERS≈number؟ insert a string with CHARACTERS repeated number times.
   - %RF% read file and insert it after running it through the processing subsection.
-  - %SA% paste selected text as is
   - %SL% paste selection lower cased
+  - %ST% paste selected text as is
   - %SU% paste selection upper cased
   - %T% insert tab/spaces
+  - ctrl+alt+c characters/communicate
+  - ctrl+alt+d define
+    - If if, elif, else.
+    - Function normal, class, boolean option, multi option, single option.
+    - Class.
+  - ctrl+alt+p phrases
+    - Empty _dictToRtn_, _boolToRtn_, _intToRtn_, _tuplToRtn_, _strToRtn_
+    - Return _dictToRtn_, _boolToRtn_, _intToRtn_, _tuplToRtn_, _strToRtn_
+    - Add to _dictToRtn_, _boolToRtn_, _intToRtn_, _tuplToRtn_, _strToRtn_
+    - locals().update()
   - ~~%SC% paste selected text camel cased~~
   - ~~%SG% paste selected text slug cased~~
   - ~~%SN% paste selected text snaked cased~~
   - ~~%SP% paste selected text pascal cased~~
   - ~~%SS% paste selected text space cased~~
   - ~~%ST% paste selection title cased~~
-
 
         to.camel('what_the_heck')      // "whatTheHeck"
         to.capital('what the heck')    // "What The Heck"

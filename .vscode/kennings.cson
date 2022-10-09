@@ -1,0 +1,17 @@
+"*": {
+    "modeD":
+    {
+        "ii": {
+            "description": "If if template"
+            "body": "if (%N%%T%%T%(%ST%%C%)%N%):%N%%T%pass"
+        }
+        "ie": {
+            "description": "If if template"
+            "body": "elif (%N%%T%%T%(%ST%%C%)%N%):%N%%T%pass"
+        }
+        "is": {
+            "description": "If if template"
+            "body": "else:%N%%T%pass"
+        }
+    }
+}

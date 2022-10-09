@@ -1,0 +1,12 @@
+
+
+import * as vscode from "vscode";
+import * as path from "path";
+
+
+export class Paths {
+
+  public static getExtensionPath(file: string): string {
+    return this.context.asAbsolutePath(path.join("misc", file));
+  }
+}
