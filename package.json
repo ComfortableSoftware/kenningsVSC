@@ -2,7 +2,7 @@
   "name": "kenningsVSC",
   "displayName": "kenningsVSC",
   "description": "My reimagined snippets from atom ported to vscode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "GaelicGrime",
   "repository": "https://github.com/GaelicGrime/kenningsVSC",
   "engines": {
@@ -13,9 +13,7 @@
   ],
   "activationEvents": [
     "onCommand:extension.helloWorld",
-    "onCommand:kennings.modeC",
-    "onCommand:kennings.modeD",
-    "onCommand:kennings.modeP"
+    "onCommand:extension.doKenning"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -25,16 +23,8 @@
         "title": "Hello World"
       },
       {
-        "command": "kennings.modeC",
-        "title": "Mode C"
-      },
-      {
-        "command": "kennings.modeD",
-        "title": "Mode D"
-      },
-      {
-        "command": "kennings.modeP",
-        "title": "Mode P"
+        "command": "extension.doKenning",
+        "title": "Do Kennings"
       }
     ]
   },

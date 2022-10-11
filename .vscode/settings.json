@@ -1,3 +1,4 @@
 {
-    "kennings.currentMode": "ModeNONE"
+    "kennings.currentMode": "ModeNONE",
+    "kennings.package": "kenningsVSC"
 }
