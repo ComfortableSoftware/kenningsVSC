@@ -2,7 +2,6 @@
 
 import * as vscode from "vscode";
 import * as path from "path";
-//import * as PARSER from "cson";
 import * as FS from "fs";
 import * as CP from "child_process";
 import { PassThrough } from "stream";
@@ -12,151 +11,172 @@ import { PassThrough } from "stream";
 
 
 export class doKennings {
-
+/*
   constructor(context: vscode.ExtensionContext) {
-    type GenericDictionary<T> = {
-      [x: string]: T | GenericDictionary<T>;
-    }
-    this.activeFilename = "";
-    this.activeFilepath = "";
+    doKennings.activeFilename = "";
+    doKennings.activeFilepath = "";
     doKennings.dictToUse = {};
-    this.document = "";
-    this.editor = "";
-    this.extensionPath = "";
-    this.myArgs = [];
-    this.myContext = "";
-    this.myERR = "";
-    this.mySTDERR = "";
-    this.mySTDOUT = "";
-    this.RESULT = "";
-    this.stringArray = [];
-    this.thisIndent = "";
-    this.thisLanguage = "";
-    this.thisSelectedText = "";
-    this.thisSelection = "";
-    this.thisTabsize = "";
-    this.window = "";
-    this.workspacePath = "";
-    this.workspaceUri = "";
+    doKennings.document = "";
+    doKennings.editor = "";
+    doKennings.extensionPath = "";
+    doKennings.myArgs = "";
+    doKennings.myContext = "";
+    doKennings.myERR = "";
+    doKennings.mySTDERR = "";
+    doKennings.mySTDOUT = "";
+    doKennings.RESULT = "";
+    doKennings.stringArray = [];
+    doKennings.thisIndent = "";
+    doKennings.thisLanguage = "";
+    doKennings.thisSelectedText = "";
+    doKennings.thisSelection = "";
+    doKennings.thisTabsize = "";
+    doKennings.window = "";
+    doKennings.workspacePath = "";
+    doKennings.workspaceUri = "";
+  }
+*/
+
+  static activeFilename: any;
+  static activeFilepath: any;
+  static dictToUse: any;
+  static document: any;
+  static editor: any;
+  static extensionPath: any;
+  static myArgs: any;
+  static myContext: any;
+  static myERR: any;
+  static mySTDERR: any;
+  static mySTDOUT: any;
+  static RESULT: any;
+  static stringArray: any;
+  static thisIndent: any;
+  static thisLanguage: any;
+  static thisSelectedText: any;
+  static thisSelection: any;
+  static thisTabsize: any;
+  static window: any;
+  static workspacePath: any;
+  static workspaceUri: any;
+
+
+  async insertKennings (args: any, context:vscode.ExtensionContext): Promise<void> {
+
+    doKennings.myArgs = args;
+    doKennings.myContext = context;
+
+    doKennings.extensionPath = context.asAbsolutePath("");
+
+    doKennings.window = vscode.window;
+
+    doKennings.editor = doKennings.window.activeTextEditor;
+    doKennings.thisTabsize = doKennings.editor.options.tabSize;
+    doKennings.thisSelection = doKennings.editor?.selection;
+
+    doKennings.document = doKennings.editor.document;
+    doKennings.activeFilename = doKennings.document.fileName;
+    doKennings.thisLanguage = doKennings.document.languageId;
+    doKennings.thisSelectedText = doKennings.document.getText(doKennings.thisSelection);
+
+    doKennings.activeFilepath = path.dirname(doKennings.activeFilename);
+    doKennings.thisIndent = doKennings.thisSelection.active.character / doKennings.thisTabsize;
+
+    doKennings.workspaceUri = vscode.workspace.textDocuments[0].uri;
+    doKennings.workspacePath = vscode.workspace.getWorkspaceFolder(doKennings.workspaceUri)?.uri.fsPath;
+
+    const allDone = await this.buildAndGetInput();
+    //doKennings.makeList([
+    //    "*",
+    //    doKennings.thisLanguage
+    //]);
+    //const items = doKennings.makeItems(doKennings.mySTDOUT);
+    //console.log(`items ${items}`);
+    //doKennings.getInput(items);
   }
 
-  activeFilename: any;
-  activeFilepath: any;
-  static dictToUse: any;
-  document: any;
-  editor: any;
-  extensionPath: any;
-  myArgs: any;
-  myContext: any;
-  myERR: any;
-  mySTDERR: any;
-  mySTDOUT: any;
-  RESULT: any;
-  stringArray: any;
-  thisIndent: any;
-  thisLanguage: any;
-  thisSelectedText: any;
-  thisSelection: any;
-  thisTabsize: any;
-  window: any;
-  workspacePath: any;
-  workspaceUri: any;
+  async buildAndGetInput(): Promise<boolean> {
+    await this.doTheThings();
+    console.log(`mySTDOUT to parse ${doKennings.mySTDOUT}`);
+    doKennings.dictToUse = JSON.parse(doKennings.mySTDOUT);
+    console.log(`dictToUse before getInput ${doKennings.dictToUse.toString()}`);
+    const gotInput = await this.getInput(doKennings.dictToUse);
+    return true;
+  }
 
-
-  insertKennings (args: any, context:vscode.ExtensionContext): void {
-
-    this.myArgs = args;
-    this.myContext = context;
-
-    this.extensionPath = context.asAbsolutePath("");
-
-    this.window = vscode.window;
-
-    this.editor = this.window.activeTextEditor;
-    this.thisTabsize = this.editor.options.tabSize;
-    this.thisSelection = this.editor?.selection;
-
-    this.document = this.editor.document;
-    this.activeFilename = this.document.fileName;
-    this.thisLanguage = this.document.languageId;
-    this.thisSelectedText = this.document.getText(this.thisSelection);
-
-    this.activeFilepath = path.dirname(this.activeFilename);
-    this.thisIndent = this.thisSelection.active.character / this.thisTabsize;
-
-    this.workspaceUri = vscode.workspace.textDocuments[0].uri;
-    this.workspacePath = vscode.workspace.getWorkspaceFolder(this.workspaceUri)?.uri.fsPath;
-
-    this.makeList([
-        "*",
-        this.thisLanguage
-    ]);
-    const items = this.makeItems(this.mySTDOUT);
-    console.log(`items ${items}`);
-    this.getInput(items);
+  async doTheThings(): Promise<boolean> {
+    try {
+      const commandStr = `${doKennings.extensionPath}/utils/makeList.py ` +
+          `"${doKennings.extensionPath}/.vscode/kennings.json" ` +
+          `"${doKennings.workspacePath}/.vscode/kennings.json" ` +
+          `"${doKennings.activeFilepath}/kennings.json" ` +
+          `"${doKennings.thisLanguage}"`;
+      console.log(`commandStr ${commandStr}`);
+      await CP.exec(
+          commandStr,
+          (error, stdout, stderr) => {
+              doKennings.myERR = error;
+              console.log(`error ${error}`);
+              doKennings.mySTDERR = stderr;
+              console.log(`stderr ${stderr}`);
+              doKennings.mySTDOUT = stdout;
+              console.log(`stdout ${stdout}`);
+              console.log(`mySTDOUT ${doKennings.mySTDOUT}`);
+          });
+    }
+    catch (e) {
+      console.error(`Something went wrong.`);
+      console.error(e);
+      return false;
+    }
+    return true;
   }
 
 
   makeList(languages: Array<string>): any {
-    console.log(`Making list for languages ${languages.toString()}`);
-    let data = FS.readFileSync(`${this.extensionPath}/.vscode/kennings.cson`);
+    console.log(`Making list for languages [${languages.toString()}]`);
+    let data = FS.readFileSync(`${doKennings.extensionPath}/.vscode/kennings.json`);
+    console.log(`data ${data.toString()}`);
     const TDictToRtn = JSON.parse('' + data);
+    console.log(`TDictToRtn 1 ${TDictToRtn.toString()}`);
     try {
-      data = FS.readFileSync(`${this.workspacePath}/.vscode/kennings.cson`);
+      data = FS.readFileSync(`${doKennings.workspacePath}/.vscode/kennings.json`);
+      console.log(`data ${data.toString()}`);
       TDictToRtn.update(JSON.parse('' + data));
+      console.log(`TDictToRtn 2 ${TDictToRtn.toString()}`);
     }
     catch (e) {
-      console.log(`INFO: No project ".vscode/kennings.cson" file.`);
+      console.log(`INFO: No project ".vscode/kennings.json" file.`);
+      console.log(e);
     }
     try {
-      data = FS.readFileSync(`${this.activeFilepath}/kennings.cson`);
+      data = FS.readFileSync(`${doKennings.activeFilepath}/kennings.json`);
+      console.log(`data ${data.toString()}`);
       TDictToRtn.update(JSON.parse('' + data));
-    }
+      console.log(`TDictToRtn 3 ${TDictToRtn.toString()}`);
+  }
     catch (e) {
-      console.log(`INFO: No file "kennings.cson" file.`);
+      console.log(`INFO: No file "kennings.json" file.`);
+      console.log(e);
     }
     try {
+      console.log(`TDictToRtn[*] 4`);
+      console.log(TDictToRtn["*"]);
       doKennings.dictToUse = TDictToRtn["*"];
     }
     catch (e) {
       console.log(`No entries found for "*".`);
-    }
+      console.log(e);
+  }
     languages.forEach(function (thisLanguage) {
       try {
         doKennings.dictToUse.update(TDictToRtn[thisLanguage]);
       }
       catch (e) {
         console.log(`No entries found for language "${thisLanguage}".`);
+        console.log(e);
       }
     });
   }
-
-
-/*
-  makeList(languages: Array<string>): any {
-    try {
-      const execCommand = `${this.extensionPath}/src/utils/makeList.py "${this.extensionPath}"`;
-      CP.exec(
-          execCommand,
-          (error, stdout, stderr) => {
-              this.myERR = error;
-              console.log(`error ${error}`);
-              this.mySTDERR = stderr;
-              console.log(`stderr ${stderr}`);
-              this.mySTDOUT = stdout;
-              console.log(`stdout ${stdout}`);
-          });
-    }
-    catch (e) {
-      console.error(`Something went wrong.`);
-      console.error(e);
-      return;
-    }
-    this.stringArray = this.mySTDOUT.split("|");
-    console.log(`stringArray`);
-    console.log(this.stringArray);
-  }
-*/
 
 
   getInput(items: any): any {
@@ -171,21 +191,24 @@ export class doKennings {
     //myQuickPick.buttons = [new RefreshButton()];
     myQuickPick.onDidAccept(() => {
         console.log(`Accepted ${myQuickPick.selectedItems.toString()}`);
-        this.RESULT = myQuickPick.selectedItems[0];
+        doKennings.RESULT = myQuickPick.selectedItems[0];
       });
     myQuickPick.onDidHide(() => {
       myQuickPick.dispose();
     });
     myQuickPick.show();
-    console.log(`RESULT ${this.RESULT.toString()}`);
+    console.log(`RESULT ${doKennings.RESULT.toString()}`);
     console.log(`Got input`);
   }
+
 
   makeItems(stringToSplit): any {
     const itemsToRtn: any = [];
     const splitStr = stringToSplit.split("|");
     for (const thisItem in splitStr) {
-      const thisSplitItem = splitStr[thisItem].split("°");
+      console.log(`thisItem ${thisItem.toString()}`);
+      const TStr = splitStr[thisItem].toString();
+      const thisSplitItem = TStr.split("°");
       const tempDict = {
         label: thisSplitItem[1],
         description: thisSplitItem[2]
