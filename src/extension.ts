@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand('extension.doKenning', (_) => {
       DoKennings.insertKennings(_, context);
   }));
-  console.log("Kennigs activated");
+  console.log("Kennings activated");
 }
 
 
