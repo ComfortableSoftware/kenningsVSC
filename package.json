@@ -2,7 +2,7 @@
   "name": "kenningsvsc",
   "displayName": "kenningsVSC",
   "description": "My reimagined snippets from atom ported to vscode",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "publisher": "GaelicGrime",
   "repository": "https://github.com/GaelicGrime/kenningsVSC",
   "engines": {
