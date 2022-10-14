@@ -135,6 +135,142 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="intro"><a class="header" href="#intro">Intro</a></h1>
+<ul>
+<li>
+<h3 id="commands"><a class="header" href="#commands">Commands</a></h3>
+<ul>
+<li>
+<p>%N% insert newline</p>
+</li>
+<li>
+<p>%NW% insert windows newline</p>
+</li>
+<li>
+<p>%QB% insert back quote</p>
+</li>
+<li>
+<p>%QD% insert double quote</p>
+</li>
+<li>
+<p>%QS% insert single quote</p>
+</li>
+<li>
+<p>%R%°CHARACTERS≈number؟ insert a string with CHARACTERS repeated number times.</p>
+</li>
+<li>
+<p>%RF% read file and insert it after running it through the processing subsection.</p>
+</li>
+<li>
+<p>%SL% paste selection lower cased</p>
+</li>
+<li>
+<p>%ST% paste selected text as is</p>
+</li>
+<li>
+<p>%SU% paste selection upper cased</p>
+</li>
+<li>
+<p>%T% insert tab/spaces</p>
+</li>
+<li>
+<p>ctrl+alt+c characters/communicate</p>
+</li>
+<li>
+<p>ctrl+alt+d define</p>
+<ul>
+<li>If if, elif, else.</li>
+<li>Function normal, class, boolean option, multi option, single option.</li>
+<li>Class.</li>
+</ul>
+</li>
+<li>
+<p>ctrl+alt+p phrases</p>
+<ul>
+<li>Empty <em>dictToRtn</em>, <em>boolToRtn</em>, <em>intToRtn</em>, <em>tuplToRtn</em>, <em>strToRtn</em></li>
+<li>Return <em>dictToRtn</em>, <em>boolToRtn</em>, <em>intToRtn</em>, <em>tuplToRtn</em>, <em>strToRtn</em></li>
+<li>Add to <em>dictToRtn</em>, <em>boolToRtn</em>, <em>intToRtn</em>, <em>tuplToRtn</em>, <em>strToRtn</em></li>
+<li>locals().update()</li>
+</ul>
+</li>
+<li>
+<p><del>%SC% paste selected text camel cased</del></p>
+</li>
+<li>
+<p><del>%SG% paste selected text slug cased</del></p>
+</li>
+<li>
+<p><del>%SN% paste selected text snaked cased</del></p>
+</li>
+<li>
+<p><del>%SP% paste selected text pascal cased</del></p>
+</li>
+<li>
+<p><del>%SS% paste selected text space cased</del></p>
+</li>
+<li>
+<p><del>%ST% paste selection title cased</del></p>
+<pre><code>to.camel('what_the_heck')      // &quot;whatTheHeck&quot;
+to.capital('what the heck')    // &quot;What The Heck&quot;
+to.constant('whatTheHeck')     // &quot;WHAT_THE_HECK&quot;
+to.dot('whatTheHeck')          // &quot;what.the.heck&quot;
+to.inverse('whaT tHe HeCK')    // &quot;WHAt ThE HeCK&quot;
+to.lower('whatTheHeck')        // &quot;what the heck&quot;
+to.pascal('what.the.heck')     // &quot;WhatTheHeck&quot;
+to.sentence('WHAT THE HECK.')  // &quot;What the heck.&quot;
+to.slug('whatTheHeck')         // &quot;what-the-heck&quot;
+to.snake('whatTheHeck')        // &quot;what_the_heck&quot;
+to.space('what.the.heck')      // &quot;what the heck&quot;
+to.title('what the heck')      // &quot;What the Heck&quot;
+to.upper('whatTheHeck')        // &quot;WHAT THE HECK&quot;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<ul>
+<li>Ignore file extensions.
+<ul>
+<li>Array</li>
+</ul>
+</li>
+<li>Ignore per directory kennings.
+<ul>
+<li>Boolean</li>
+</ul>
+</li>
+<li>Ignore per project kennings.
+<ul>
+<li>Boolean</li>
+</ul>
+</li>
+<li>Ignore global kennings.
+<ul>
+<li>Boolean</li>
+</ul>
+</li>
+<li>Alias file extensions.
+<ul>
+<li>
+<blockquote>
+<p>Alias file extensions to a known file type</p>
+</blockquote>
+</li>
+<li>Array
+<ul>
+<li>&quot;python&quot;: [<code>.zpy</code>, <code>.pyz</code>, <code>.md</code>]</li>
+<li>
+<blockquote>
+<p>These extensions will be treated as python files</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 

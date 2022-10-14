@@ -1,4 +1,7 @@
 {
-    "kennings.currentMode": "ModeNONE",
-    "kennings.package": "kenningsVSC"
+    "kenningsVSC.package": "kenningsVSC",
+    "kenningsVSC.ignoreFiles": [
+      ".",
+      ".."
+    ]
 }

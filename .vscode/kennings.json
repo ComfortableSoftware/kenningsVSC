@@ -1,20 +1,8 @@
 {
   "*": {
-    "M0A": {
-        "description": "Mark section 0 All (end, then start)",
-        "body": "#%R%° ⟰0≈80؟%N%#%R%° 0⟱≈80؟"
-    }
-  },
-  "python": {
-    "M1A": {
-        "description": "this shit",
-        "body": "#%R%° 0⟱≈80؟"
-    }
-  },
-  "typescript": {
-    "M2A": {
-        "description": "testing this shit",
-        "body": "#%R%° 0⟱≈80؟%N%%ST%%C%pass%N%#%R%° ⟰0≈80؟"
+    "ZZZ": {
+        "description": "placeholder",
+        "body": "placeholder"
     }
   }
 }

@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "allowJs": false,
     "lib": ["es2020"],
     "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": false,
     "outDir": "out",
     "rootDir": "src",
@@ -9,5 +11,5 @@
     "strict": true,
     "target": "es2020"
   },
-  "exclude": ["node_modules", ".vscode-test"]
+  "exclude": [".atomcode", "node_modules", ".vscode-test", "doc", "out"]
 }

@@ -18,12 +18,55 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Hello World"
+        "command": "extension.insertKenning",
+        "title": "Insert Kenning"
       },
       {
-        "command": "extension.doKenning",
-        "title": "Do Kennings"
+        "command": "extension.refreshWorkspaceFiles",
+        "title": "Force refresh local cache."
+      }
+    ],
+    "configuration": [
+      {
+        "id": "kenningsVSC",
+        "title": "Kennings settings",
+        "properties": {
+          "kennings.ignoredFiles": {
+            "type": "array",
+            "description": "List of files to always ignore and not offer kennings while editing, or include in the files used to build the local kennings cache",
+            "items": {
+              "type": "string",
+              "enum": [
+                "package.json",
+                "*.deploy",
+                "*.dev",
+                ".editorconfig",
+                ".eslintrc",
+                ".gitignore",
+                "book/*"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "kennings.ignorePerDirectoryFiles": {
+            "type": "boolean",
+            "default": false,
+            "description": "Ignore any kennings files not in a '.vscode' directory.",
+            "scope": "window"
+          },
+          "kennings.ignorePerWorkbenchFiles": {
+            "type": "boolean",
+            "default": false,
+            "description": "Ignore any kennings files in the '{workbenchPath}/.vscode' directory.",
+            "scope": "window"
+          },
+          "kennings.ignoreGlobalFiles": {
+            "type": "boolean",
+            "default": false,
+            "description": "Ignore any kennings files in the '{extensionPath}/.vscode' directory.",
+            "scope": "window"
+          }
+        }
       }
     ]
   },

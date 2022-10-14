@@ -4,218 +4,129 @@ import * as vscode from "vscode";
 import * as path from "path";
 import * as FS from "fs";
 import * as CP from "child_process";
-import { PassThrough } from "stream";
-
 // editor.edit((edit: string) => edit.replace(thisSelection, thisSelectedUpcaseText));
 // editor.selections = vscode.editor.selections.map( sel => new vscode.Selection(sel.start.translate(0,1), sel.end.translate(0,1)));
 
 
 export class doKennings {
-/*
-  constructor(context: vscode.ExtensionContext) {
-    doKennings.activeFilename = "";
-    doKennings.activeFilepath = "";
-    doKennings.dictToUse = {};
-    doKennings.document = "";
-    doKennings.editor = "";
-    doKennings.extensionPath = "";
-    doKennings.myArgs = "";
-    doKennings.myContext = "";
-    doKennings.myERR = "";
-    doKennings.mySTDERR = "";
-    doKennings.mySTDOUT = "";
-    doKennings.RESULT = "";
-    doKennings.stringArray = [];
-    doKennings.thisIndent = "";
-    doKennings.thisLanguage = "";
-    doKennings.thisSelectedText = "";
-    doKennings.thisSelection = "";
-    doKennings.thisTabsize = "";
-    doKennings.window = "";
-    doKennings.workspacePath = "";
-    doKennings.workspaceUri = "";
-  }
-*/
 
+  static activeDocument: any;
+  static activeEditor: any;
   static activeFilename: any;
   static activeFilepath: any;
-  static dictToUse: any;
-  static document: any;
-  static editor: any;
+  static activeWindow: any;
+  static extensionKenningsFiletypes : any;
   static extensionPath: any;
+  static fileKenningsFiletypes: any;
+  static inputItems: any;
+  static isReady: boolean;
   static myArgs: any;
   static myContext: any;
   static myERR: any;
   static mySTDERR: any;
   static mySTDOUT: any;
   static RESULT: any;
-  static stringArray: any;
+  static theseSettings: any;
+  static thisCharacterPosition: any;
   static thisIndent: any;
   static thisLanguage: any;
   static thisSelectedText: any;
   static thisSelection: any;
   static thisTabsize: any;
-  static window: any;
+  static workspaceKenningsFiletypes: any;
   static workspacePath: any;
   static workspaceUri: any;
 
 
-  async insertKennings (args: any, context:vscode.ExtensionContext): Promise<void> {
+  initKennings (context:vscode.ExtensionContext): void {
+    doKennings.isReady = false;
+    doKennings.extensionKenningsFiletypes = [];
+    doKennings.fileKenningsFiletypes = [];
+    doKennings.workspaceKenningsFiletypes = [];
+    doKennings.mySTDOUT = ``;
 
-    doKennings.myArgs = args;
     doKennings.myContext = context;
-
-    doKennings.extensionPath = context.asAbsolutePath("");
-
-    doKennings.window = vscode.window;
-
-    doKennings.editor = doKennings.window.activeTextEditor;
-    doKennings.thisTabsize = doKennings.editor.options.tabSize;
-    doKennings.thisSelection = doKennings.editor?.selection;
-
-    doKennings.document = doKennings.editor.document;
-    doKennings.activeFilename = doKennings.document.fileName;
-    doKennings.thisLanguage = doKennings.document.languageId;
-    doKennings.thisSelectedText = doKennings.document.getText(doKennings.thisSelection);
-
+    doKennings.extensionPath = doKennings.myContext.asAbsolutePath(``);
+    doKennings.activeWindow = vscode.window;
+    doKennings.activeEditor = doKennings.activeWindow.activeTextEditor;
+    doKennings.thisTabsize = doKennings.activeEditor.options.tabSize;
+    doKennings.theseSettings = doKennings.activeEditor?.selections;
+    doKennings.thisSelection = doKennings.activeEditor?.selection;
+    // fix for multiple selections
+    doKennings.activeDocument = doKennings.activeEditor.document;
+    doKennings.activeFilename = doKennings.activeDocument.fileName;
+    doKennings.thisLanguage = doKennings.activeDocument.languageId;
+    doKennings.thisSelectedText = doKennings.activeDocument.getText(doKennings.thisSelection);
     doKennings.activeFilepath = path.dirname(doKennings.activeFilename);
-    doKennings.thisIndent = doKennings.thisSelection.active.character / doKennings.thisTabsize;
-
+    doKennings.thisCharacterPosition = doKennings.thisSelection.active.character;
+    doKennings.thisIndent = doKennings.thisCharacterPosition; // Needs to actually count spaces at front of selected line.
     doKennings.workspaceUri = vscode.workspace.textDocuments[0].uri;
     doKennings.workspacePath = vscode.workspace.getWorkspaceFolder(doKennings.workspaceUri)?.uri.fsPath;
 
-    const allDone = await this.buildAndGetInput();
-    //doKennings.makeList([
-    //    "*",
-    //    doKennings.thisLanguage
-    //]);
-    //const items = doKennings.makeItems(doKennings.mySTDOUT);
-    //console.log(`items ${items}`);
-    //doKennings.getInput(items);
-  }
-
-  async buildAndGetInput(): Promise<boolean> {
-    await this.doTheThings();
-    console.log(`mySTDOUT to parse ${doKennings.mySTDOUT}`);
-    doKennings.dictToUse = JSON.parse(doKennings.mySTDOUT);
-    console.log(`dictToUse before getInput ${doKennings.dictToUse.toString()}`);
-    const gotInput = await this.getInput(doKennings.dictToUse);
-    return true;
-  }
-
-  async doTheThings(): Promise<boolean> {
+    // Check global/extension files and directories.
     try {
-      const commandStr = `${doKennings.extensionPath}/utils/makeList.py ` +
-          `"${doKennings.extensionPath}/.vscode/kennings.json" ` +
-          `"${doKennings.workspacePath}/.vscode/kennings.json" ` +
-          `"${doKennings.activeFilepath}/kennings.json" ` +
-          `"${doKennings.thisLanguage}"`;
-      console.log(`commandStr ${commandStr}`);
-      await CP.exec(
-          commandStr,
-          (error, stdout, stderr) => {
-              doKennings.myERR = error;
-              console.log(`error ${error}`);
-              doKennings.mySTDERR = stderr;
-              console.log(`stderr ${stderr}`);
-              doKennings.mySTDOUT = stdout;
-              console.log(`stdout ${stdout}`);
-              console.log(`mySTDOUT ${doKennings.mySTDOUT}`);
-          });
+      FS.accessSync(`${doKennings.extensionPath}/.vscode/kennings`);
     }
     catch (e) {
-      console.error(`Something went wrong.`);
-      console.error(e);
-      return false;
+      FS.mkdirSync(`${doKennings.extensionPath}/.vscode/kennings`, {recursive: true});
     }
-    return true;
+    try {
+      FS.accessSync(`${doKennings.extensionPath}/.vscode/kennings.json`);
+    }
+    catch (e) {
+      console.log(`make kennings.json file`);
+    }
+
+    // Check workspace files and directories.
+    try {
+      FS.accessSync(`${doKennings.workspacePath}/.vscode/kennings/.kenningsTemp`);
+    }
+    catch (e) {
+      FS.mkdirSync(`${doKennings.workspacePath}/.vscode/kennings/.kenningsTemp`, {recursive: true});
+    }
+    try {
+      FS.accessSync(`${doKennings.workspacePath}/.vscode/kennings.json`);
+    }
+    catch (e) {
+      console.log(`make kennings.json file`);
+    }
+
+    this.refreshWorkspaceFiles();
+    // create workspace folders if needed.
+    // create workspace settings if needed.
+    // subscribe to workspace and file changes.
   }
 
 
-  makeList(languages: Array<string>): any {
-    console.log(`Making list for languages [${languages.toString()}]`);
-    let data = FS.readFileSync(`${doKennings.extensionPath}/.vscode/kennings.json`);
-    console.log(`data ${data.toString()}`);
-    const TDictToRtn = JSON.parse('' + data);
-    console.log(`TDictToRtn 1 ${TDictToRtn.toString()}`);
-    try {
-      data = FS.readFileSync(`${doKennings.workspacePath}/.vscode/kennings.json`);
-      console.log(`data ${data.toString()}`);
-      TDictToRtn.update(JSON.parse('' + data));
-      console.log(`TDictToRtn 2 ${TDictToRtn.toString()}`);
-    }
-    catch (e) {
-      console.log(`INFO: No project ".vscode/kennings.json" file.`);
-      console.log(e);
-    }
-    try {
-      data = FS.readFileSync(`${doKennings.activeFilepath}/kennings.json`);
-      console.log(`data ${data.toString()}`);
-      TDictToRtn.update(JSON.parse('' + data));
-      console.log(`TDictToRtn 3 ${TDictToRtn.toString()}`);
+  insertKenning (keys: string): void {
+    doKennings.myArgs = keys;
+    console.log(`keys ${keys}`);
   }
-    catch (e) {
-      console.log(`INFO: No file "kennings.json" file.`);
-      console.log(e);
-    }
-    try {
-      console.log(`TDictToRtn[*] 4`);
-      console.log(TDictToRtn["*"]);
-      doKennings.dictToUse = TDictToRtn["*"];
-    }
-    catch (e) {
-      console.log(`No entries found for "*".`);
-      console.log(e);
+
+
+  makeEmptyKenningsJsonFile(pathToUse: string): void {
+    const dataToWrite = FS.readFileSync(`${doKennings.extensionPath}/.vscode/kennings/empty.kennings.json`);
+    FS.writeFileSync(`${pathToUse}/kennings.json`, `${dataToWrite}`);
   }
-    languages.forEach(function (thisLanguage) {
-      try {
-        doKennings.dictToUse.update(TDictToRtn[thisLanguage]);
-      }
-      catch (e) {
-        console.log(`No entries found for language "${thisLanguage}".`);
-        console.log(e);
-      }
+
+
+  makeEmptyExtKenningsJsonFile(pathToUse: string, extensionToUse: string): void {
+    const dataToWrite = FS.readFileSync(`${doKennings.extensionPath}/.vscode/kennings/empty.ZZZ.kennings.json`);
+    FS.writeFileSync(`${pathToUse}/${extensionToUse}.kennings.json`, `${dataToWrite}`);
+  }
+
+
+  refreshWorkspaceFiles(): void {
+    doKennings.isReady = false;
+    CP.exec(``, (error, stdout, stderr) => {
+      doKennings.myERR = error;
+      doKennings.mySTDERR = stderr;
+      doKennings.mySTDOUT = stdout;
+      doKennings.isReady = true;
     });
   }
 
 
-  getInput(items: any): any {
-    console.log(`Getting input for items ${items.toString()}`);
-    const myQuickPick = vscode.window.createQuickPick();
-    myQuickPick.title = "Pick a kenning";
-    myQuickPick.canSelectMany = false;
-    myQuickPick.matchOnDescription = true;
-    //myQuickPick.matchOnDetail = true;
-    myQuickPick.placeholder = "Pick a kenning";
-    myQuickPick.items = items;
-    //myQuickPick.buttons = [new RefreshButton()];
-    myQuickPick.onDidAccept(() => {
-        console.log(`Accepted ${myQuickPick.selectedItems.toString()}`);
-        doKennings.RESULT = myQuickPick.selectedItems[0];
-      });
-    myQuickPick.onDidHide(() => {
-      myQuickPick.dispose();
-    });
-    myQuickPick.show();
-    console.log(`RESULT ${doKennings.RESULT.toString()}`);
-    console.log(`Got input`);
-  }
-
-
-  makeItems(stringToSplit): any {
-    const itemsToRtn: any = [];
-    const splitStr = stringToSplit.split("|");
-    for (const thisItem in splitStr) {
-      console.log(`thisItem ${thisItem.toString()}`);
-      const TStr = splitStr[thisItem].toString();
-      const thisSplitItem = TStr.split("°");
-      const tempDict = {
-        label: thisSplitItem[1],
-        description: thisSplitItem[2]
-      };
-      itemsToRtn.push(tempDict);
-    }
-    return itemsToRtn;
-  }
+//
 }
-
+//
