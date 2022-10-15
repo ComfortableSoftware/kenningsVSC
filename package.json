@@ -2,7 +2,7 @@
   "name": "kenningsvsc",
   "displayName": "kenningsVSC",
   "description": "My reimagined snippets from atom ported to vscode",
-  "version": "0.1.6",
+  "version": "0.1.14",
   "publisher": "GaelicGrime",
   "repository": "https://github.com/GaelicGrime/kenningsVSC",
   "engines": {
@@ -72,7 +72,8 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublishOnly": "autoIncrement -n",
+    "vscode:prepublish": "autoIncrement -p && npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
     "watch": "tsc -watch -p ./"
@@ -89,9 +90,31 @@
     "update-notifier": "^6.0.2"
   },
   "vsce": {
-    "version": "patch",
     "target": "linux-x64",
-    "allow-missing-repository": true,
-    "out": "../"
+    "allow-missing-repository": true
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "semantic-release-vsce",
+        {
+          "packageVsix": true,
+          "publish": false
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "*.vsix",
+              "label": "Extension File"
+            }
+          ]
+        }
+      ]
+    ]
   }
 }
