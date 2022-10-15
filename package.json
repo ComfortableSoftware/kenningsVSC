@@ -87,5 +87,11 @@
   },
   "dependencies": {
     "update-notifier": "^6.0.2"
+  },
+  "vsce": {
+    "version": "patch",
+    "target": "linux-x64",
+    "allow-missing-repository": true,
+    "out": "../"
   }
 }
