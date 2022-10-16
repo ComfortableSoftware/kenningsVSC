@@ -1,0 +1,16 @@
+{
+  "ignoreList": [
+    "._WAB_MINE",
+    ".atomCode",
+    ".bmp",
+    ".editorconfig",
+    ".gif",
+    ".jpg",
+    ".png",
+    ".vscodeignore",
+    "/.git",
+    "/doc/book",
+    "/node_modules",
+    "/out"
+  ]
+}

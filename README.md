@@ -1,3 +1,3 @@
 ### KENNINGSVSC
-- See [DOCS.html](./DOCS.html) for the good stuff.
--
+- Snippets with added features I originally wrote for atom editor and have ported to VS-Code.
+- Documentation is available by opening './DOCS.html' in a web browser.

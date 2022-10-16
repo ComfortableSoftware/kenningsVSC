@@ -1,0 +1,290 @@
+[
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.eslintrc.js",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": ".eslintrc.js",
+    "K_JUST_FILENAME": ".eslintrc",
+    "K_EXTENSION": ".js",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.junk",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": ".junk",
+    "K_JUST_FILENAME": ".junk",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.junk/File_001.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.junk",
+    "K_FILENAME": "File_001.json",
+    "K_JUST_FILENAME": "File_001",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.junk/File_002.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.junk",
+    "K_FILENAME": "File_002.json",
+    "K_JUST_FILENAME": "File_002",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": ".vscode",
+    "K_JUST_FILENAME": ".vscode",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/cspell.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "cspell.json",
+    "K_JUST_FILENAME": "cspell",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "kennings",
+    "K_JUST_FILENAME": "kennings",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings/empty.ZZZ.kennings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_FILENAME": "empty.ZZZ.kennings.json",
+    "K_JUST_FILENAME": "empty.ZZZ.kennings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings/empty.kennings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_FILENAME": "empty.kennings.json",
+    "K_JUST_FILENAME": "empty.kennings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings/kennings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_FILENAME": "kennings.json",
+    "K_JUST_FILENAME": "kennings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings/py.kennings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_FILENAME": "py.kennings.json",
+    "K_JUST_FILENAME": "py.kennings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings/python.kennings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kennings",
+    "K_FILENAME": "python.kennings.json",
+    "K_JUST_FILENAME": "python.kennings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/kenningsSettings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "kenningsSettings.json",
+    "K_JUST_FILENAME": "kenningsSettings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/launch.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "launch.json",
+    "K_JUST_FILENAME": "launch",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/settings.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "settings.json",
+    "K_JUST_FILENAME": "settings",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/tasks.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "tasks.json",
+    "K_JUST_FILENAME": "tasks",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode/test.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/.vscode",
+    "K_FILENAME": "test.json",
+    "K_JUST_FILENAME": "test",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/DOCS.html",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "DOCS.html",
+    "K_JUST_FILENAME": "DOCS",
+    "K_EXTENSION": ".html",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/LICENSE",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "LICENSE",
+    "K_JUST_FILENAME": "LICENSE",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/README.md",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "README.md",
+    "K_JUST_FILENAME": "README",
+    "K_EXTENSION": ".md",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/demo.gif",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "demo.gif",
+    "K_JUST_FILENAME": "demo",
+    "K_EXTENSION": ".gif",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "doc",
+    "K_JUST_FILENAME": "doc",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc/src",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc",
+    "K_FILENAME": "src",
+    "K_JUST_FILENAME": "src",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc/src/INTRO.md",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc/src",
+    "K_FILENAME": "INTRO.md",
+    "K_JUST_FILENAME": "INTRO",
+    "K_EXTENSION": ".md",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc/src/SUMMARY.md",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/doc/src",
+    "K_FILENAME": "SUMMARY.md",
+    "K_JUST_FILENAME": "SUMMARY",
+    "K_EXTENSION": ".md",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/package-lock.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "package-lock.json",
+    "K_JUST_FILENAME": "package-lock",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/package.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "package.json",
+    "K_JUST_FILENAME": "package",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/src",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "src",
+    "K_JUST_FILENAME": "src",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/src/doKennings.ts",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/src",
+    "K_FILENAME": "doKennings.ts",
+    "K_JUST_FILENAME": "doKennings",
+    "K_EXTENSION": ".ts",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/src/extension.ts",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/src",
+    "K_FILENAME": "extension.ts",
+    "K_JUST_FILENAME": "extension",
+    "K_EXTENSION": ".ts",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/test.txt",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "test.txt",
+    "K_JUST_FILENAME": "test",
+    "K_EXTENSION": ".txt",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/tsconfig.json",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "tsconfig.json",
+    "K_JUST_FILENAME": "tsconfig",
+    "K_EXTENSION": ".json",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC",
+    "K_FILENAME": "utils",
+    "K_JUST_FILENAME": "utils",
+    "K_EXTENSION": "",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils/dump.py",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils",
+    "K_FILENAME": "dump.py",
+    "K_JUST_FILENAME": "dump",
+    "K_EXTENSION": ".py",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils/paths.txt",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils",
+    "K_FILENAME": "paths.txt",
+    "K_JUST_FILENAME": "paths",
+    "K_EXTENSION": ".txt",
+    "K_NUMS": -1
+  },
+  {
+    "K_PATH": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils/refreshWorkspace.py",
+    "K_DIR": "/rcr/0-sourceCode/0-development/0-ide/0-vscode/0-extensions/kenningsVSC/utils",
+    "K_FILENAME": "refreshWorkspace.py",
+    "K_JUST_FILENAME": "refreshWorkspace",
+    "K_EXTENSION": ".py",
+    "K_NUMS": -1
+  }
+]
