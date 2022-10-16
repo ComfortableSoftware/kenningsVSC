@@ -37,7 +37,6 @@ class refreshThem:
     self.FILE_PATH = SYS.argv[3]
     self.LOCAL_DICT = {}
     self.WORKSPACE_PATH = SYS.argv[2]
-
     self.WORKSPACE_NAME = self.WORKSPACE_PATH[self.WORKSPACE_PATH.rfind("/"):]
 
     try:
@@ -46,7 +45,13 @@ class refreshThem:
     except FileNotFoundError:
       self.KENNINGS_EXTENSION_SETTINGS = {}
     try:
-      with open(f"""{self.WORKSPACE_PATH}/.vscode/kenningsSettings.json""", "tr") as _FDIn_:
+      if (
+          (self,WORKSPACE_NAME == "kenningsVSC")
+      ):
+        _workspaceSettingsName_ = "kenningSettingsDev.json"
+      else:
+        _workspaceSettingsName_ = "kenningSettings.json"
+      with open(f"""{self.WORKSPACE_PATH}/.vscode/{_workspaceSettingsName_}""", "tr") as _FDIn_:
         self.KENNINGS_WORKSPACE_SETTINGS = UJ.load(_FDIn_)
     except FileNotFoundError:
       self.KENNINGS_WORKSPACE_SETTINGS = {}

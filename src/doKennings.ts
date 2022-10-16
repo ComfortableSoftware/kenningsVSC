@@ -34,6 +34,7 @@ export class doKennings {
   static thisSelection: any;
   static thisTabsize: any;
   static workspaceKenningsFiletypes: any;
+  static workspaceName: any;
   static workspacePath: any;
   static workspaceUri: any;
 
@@ -62,6 +63,7 @@ export class doKennings {
     doKennings.thisIndent = doKennings.thisCharacterPosition; // Needs to actually count spaces at front of selected line.
     doKennings.workspaceUri = vscode.workspace.textDocuments[0].uri;
     doKennings.workspacePath = vscode.workspace.getWorkspaceFolder(doKennings.workspaceUri)?.uri.fsPath;
+    doKennings.workspaceName = vscode.workspace.name;
 
     // Check global/extension files and directories.
     try {
@@ -75,6 +77,7 @@ export class doKennings {
     }
     catch (e) {
       console.log(`make kennings.json file`);
+      // in theory should never be here
     }
 
     // Check workspace files and directories.
