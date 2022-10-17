@@ -2,7 +2,7 @@
   "name": "kenningsvsc",
   "displayName": "kenningsVSC",
   "description": "My reimagined snippets from atom ported to vscode",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "publisher": "GaelicGrime",
   "repository": "https://github.com/GaelicGrime/kenningsVSC",
   "engines": {
@@ -72,7 +72,6 @@
     ]
   },
   "scripts": {
-    "vscode:prepublishOnly": "autoIncrement -n",
     "vscode:prepublish": "autoIncrement -p && npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
