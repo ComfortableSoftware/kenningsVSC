@@ -35,9 +35,14 @@ class refreshThem:
     self.EXTENSION_PATH = SYS.argv[1]
     self.FILE_LIST = []
     self.FILE_PATH = SYS.argv[3]
+    self.IGNORE_LIST = []
+    self.INCLUDE_LIST = []
+    self.KENNINGS_COMBINED_SETTINGS = None
+    self.KENNINGS_EXTENSION_SETTINGS = None
+    self.KENNINGS_WORKSPACE_SETTINGS = None
     self.LOCAL_DICT = {}
-    self.WORKSPACE_PATH = SYS.argv[2]
     self.WORKSPACE_NAME = self.WORKSPACE_PATH[self.WORKSPACE_PATH.rfind("/"):]
+    self.WORKSPACE_PATH = SYS.argv[2]
 
     try:
       with open(f"""{self.EXTENSION_PATH}/.vscode/kenningsSettings.json""", "tr") as _FDIn_:
@@ -56,22 +61,18 @@ class refreshThem:
     except FileNotFoundError:
       self.KENNINGS_WORKSPACE_SETTINGS = {}
     self.KENNINGS_COMBINED_SETTINGS = {}
-    try:
-      _listToRtn_ = self.KENNINGS_EXTENSION_SETTINGS["ignoreList"]
-    except KeyError:
-      _listToRtn_ = []
-    try:
-      _listToRtn_.append(self.KENNINGS_WORKSPACE_SETTINGS["ignoreList"])
-    except  KeyError:
-      pass
-    self.IGNORE_LIST = set(_listToRtn_)
+    # combine settings and make KENNINGS_COMBINED_SETTINGS
+    # make IGNORE_LIST and INCLUDE_LIST
+
+    self.IGNORE_LIST = set(self.IGNORE_LIST)
+    self.INCLUDE_LIST = set(self.INCLUDE_LIST)
+
 
   def doExtensionList(self):
     _listToRtn_ = CF_OS.filteredLpathGlobListPieces(
         rootDir_=self.FILE_PATH,
         ignoreList_=self.KENNINGS_SETTINGS["ignoreList"]
     )
-    self.EXTENSION_LIST = []
     for _thisItem_ in _listToRtn_:
       if (
           (_thisItem_[K_EXTENSION] != "")
@@ -90,6 +91,23 @@ class refreshThem:
 
   def writeQuickFiles(self):
     pass
+
+  def __repr__(self):
+    _strToRtn_ = f"""
+self.EXTENSION_LIST = {self.EXTENSION_LIST}
+self.EXTENSION_PATH = {self.EXTENSION_PATH}
+self.FILE_LIST = {self.FILE_LIST}
+self.FILE_PATH = {self.FILE_PATH}
+self.IGNORE_LIST = {self.IGNORE_LIST}
+self.INCLUDE_LIST = {self.INCLUDE_LIST}
+self.KENNINGS_COMBINED_SETTINGS = {self.KENNINGS_COMBINED_SETTINGS}
+self.KENNINGS_EXTENSION_SETTINGS = {self.KENNINGS_EXTENSION_SETTINGS}
+self.KENNINGS_WORKSPACE_SETTINGS = {self.KENNINGS_WORKSPACE_SETTINGS}
+self.LOCAL_DICT = {self.LOCAL_DICT}
+self.WORKSPACE_NAME = {self.WORKSPACE_NAME}
+self.WORKSPACE_PATH = {self.WORKSPACE_PATH}
+"""
+    return _strToRtn_
 
 
 def __main__():
